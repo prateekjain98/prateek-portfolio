@@ -22,9 +22,9 @@ export default function Contact({}: Props) {
                 className="flex flex-col space-y-10"
             >
                 <h4 className="text-4xl text-center text-cyan-500/50">
-                    Let's discuss ideas and technology
+                    {"Let's discuss ideas and technology"}
                 </h4>
-                <div className='space-y-10'>
+                <div className="space-y-10">
                     <div className="flex items-center justify-center space-x-5">
                         <PhoneIcon className="text-cyan-500 h-7 animate-pulse" />
                         <p className="text-xl">+91-8290939833</p>
