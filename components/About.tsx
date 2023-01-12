@@ -1,15 +1,19 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import about from './about.png'
+import { PageInfo } from '../typings'
+import { urlFor } from '../sanity'
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
 const textArray = [
     'Developed web applications on MERN stack (MongoDB, Express.js, React.js, Node.js)',
     'Developed cross platform mobile application on React Native & deployed on both Android & iOS stores ',
     'Built features on React.js, Python & SQL & implemented REST APIs of crypto exchanges for internal accounting software',
 ]
-export default function About({}: Props) {
+export default function About({ pageInfo }: Props) {
     return (
         <motion.div
             //TODO: Animation not working in parent div
@@ -30,7 +34,7 @@ export default function About({}: Props) {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
-                src={about.src}
+                src={urlFor(pageInfo?.aboutImage).url()}
                 className="-mb-20 md:mb-0 m-10 flex-shrink-0 h-40 object-cover md:h-80 xl:h-[300px]"
             />
             <motion.div
@@ -38,11 +42,7 @@ export default function About({}: Props) {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
             >
-                {textArray.map((value, index) => (
-                    <p key={index} className="text-base md:p-2">
-                        {value}
-                    </p>
-                ))}
+                <p className="text-base md:p-2">{pageInfo?.backgroundInfo}</p>
             </motion.div>
         </motion.div>
     )

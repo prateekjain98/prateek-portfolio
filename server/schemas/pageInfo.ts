@@ -24,6 +24,14 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'aboutImage',
+      title: 'About Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: 'backgroundInfo',
       title: 'Background Info',
       type: 'string',
@@ -47,7 +55,7 @@ export default defineType({
       name: 'socials',
       title: 'Socials',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'social'}}]
+      of: [{type: 'reference', to: {type: 'social'}}],
     }),
   ],
 })
