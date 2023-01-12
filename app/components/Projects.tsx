@@ -12,7 +12,7 @@ type Props = {
 export default function Projects({ projects }: Props) {
     //const projects = [1, 2, 3]
     return (
-        <div className="sectionContainer justify-evenly">
+        <div className="sectionContainer relative justify-evenly">
             <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
