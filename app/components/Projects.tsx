@@ -21,7 +21,7 @@ export default function Projects({ projects }: Props) {
             >
                 Projects
             </motion.h3>
-            <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 customScrollbar">
+            <div className="relative pt-10 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 customScrollbar">
                 {projects.map((project) => (
                     <div
                         key={project._id}
@@ -35,7 +35,7 @@ export default function Projects({ projects }: Props) {
                             className="md:w-[350px] w-[250px]"
                         />
                         <div className=" px-0 md:px-10 max-w-7xl">
-                            <div className='flex justify-center items-center'>
+                            <div className="flex justify-center items-center">
                                 <h4 className="text-2xl font-semibold text-center">
                                     {project.title}
                                 </h4>
@@ -50,7 +50,10 @@ export default function Projects({ projects }: Props) {
                             </p>
                             <div className="flex flex-wrap justify-center space-x-2 my-2">
                                 {project?.technologies?.map((tech) => (
-                                    <div key={tech._id} className="flex flex-col items-center p-1">
+                                    <div
+                                        key={tech._id}
+                                        className="flex flex-col items-center p-1"
+                                    >
                                         <img
                                             className="md:h-6 md:w-6 h-5 w-5 object-contain"
                                             src={urlFor(tech.image).url()}
