@@ -12,7 +12,7 @@ type Props = {
 export default function Projects({ projects }: Props) {
     //const projects = [1, 2, 3]
     return (
-        <div className="sectionContainer relative justify-evenly">
+        <div className="sectionContainer justify-evenly">
             <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -21,7 +21,7 @@ export default function Projects({ projects }: Props) {
             >
                 Projects
             </motion.h3>
-            <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 customScrollbar">
+            <div className="mt-10 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 customScrollbar">
                 {projects.map((project) => (
                     <div
                         key={project._id}
@@ -34,7 +34,7 @@ export default function Projects({ projects }: Props) {
                             src={urlFor(project.image).url()}
                             className="md:w-[350px] w-[250px]"
                         />
-                        <div className=" px-0 md:px-10 max-w-7xl">
+                        <div className="px-10 max-w-7xl">
                             <div className="flex justify-center items-center">
                                 <h4 className="text-2xl font-semibold text-center">
                                     {project.title}
