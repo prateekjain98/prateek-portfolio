@@ -19,7 +19,7 @@ export default function ExperienceCard({ experience }: Props) {
                 transition={{ duration: 0.8 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="h-16 w-16 xl:h-[70px] xl:w-[70px] object-contain object-center"
-                src={urlFor(experience?.companylogo).url()}
+                src={urlFor(experience?.companyLogo).url()}
             />
             <div className="px-0 md:px-10">
                 <h4 className="text-xl font-light">{experience.jobTitle}</h4>
@@ -28,7 +28,7 @@ export default function ExperienceCard({ experience }: Props) {
                 </p>
                 <div className="flex flex-wrap justify-center space-x-2 my-2">
                     {experience?.technologies?.map((tech) => (
-                        <div className="flex flex-col items-center p-1">
+                        <div key={tech._id} className="flex flex-col items-center p-1">
                             <img
                                 className="md:h-6 md:w-6 h-5 w-5 object-contain"
                                 src={urlFor(tech.image).url()}
@@ -53,8 +53,8 @@ export default function ExperienceCard({ experience }: Props) {
                           )}
                 </p>
                 <ul className="list-disc ml-5 text-xs text-left md:max-h-20 overflow-clip overflow-y-auto customScrollbar">
-                    {experience.points.map((point) => (
-                        <li>• {point}</li>
+                    {experience.points.map((point, index) => (
+                        <li key={index}>• {point}</li>
                     ))}
                 </ul>
             </div>

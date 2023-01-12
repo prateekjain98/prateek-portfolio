@@ -50,7 +50,7 @@ export default function Projects({ projects }: Props) {
                             </p>
                             <div className="flex flex-wrap justify-center space-x-2 my-2">
                                 {project?.technologies?.map((tech) => (
-                                    <div className="flex flex-col items-center p-1">
+                                    <div key={tech._id} className="flex flex-col items-center p-1">
                                         <img
                                             className="md:h-6 md:w-6 h-5 w-5 object-contain"
                                             src={urlFor(tech.image).url()}
