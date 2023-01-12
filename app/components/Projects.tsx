@@ -21,7 +21,7 @@ export default function Projects({ projects }: Props) {
             >
                 Projects
             </motion.h3>
-            <div className="relative mt-20 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 customScrollbar">
+            <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 customScrollbar">
                 {projects.map((project) => (
                     <div
                         key={project._id}
