@@ -30,9 +30,6 @@ export default function ExperienceComponent({experiences}: Props) {
                             experience={experience}
                         />
                     ))}
-                {/* <ExperienceCard />
-                <ExperienceCard />
-                <ExperienceCard /> */}
             </div>
         </div>
     )

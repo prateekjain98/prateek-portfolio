@@ -33,7 +33,7 @@ export default function ExperienceCard({ experience }: Props) {
                             className="flex flex-col items-center p-1"
                         >
                             <img
-                                className="md:h-6 md:w-6 h-3 w-3 object-contain"
+                                className="md:h-6 md:w-6 h-5 w-5 object-contain"
                                 src={urlFor(tech.image).url()}
                             />
                             <p className="text-gray-400 text-[8px] md:text-xs">
@@ -55,7 +55,7 @@ export default function ExperienceCard({ experience }: Props) {
                               { month: 'short', year: 'numeric' },
                           )}
                 </p>
-                <ul className="list-disc ml-5 md:text-xs text-[11px] text-left md:max-h-20 overflow-clip overflow-y-auto customScrollbar">
+                <ul className="list-disc ml-5 text-xs text-left md:max-h-20 overflow-clip overflow-y-auto customScrollbar">
                     {experience.points.map((point, index) => (
                         <li key={index}>• {point}</li>
                     ))}
