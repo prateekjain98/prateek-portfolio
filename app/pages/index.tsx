@@ -34,11 +34,11 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
             <section id="experience" className="snap-center">
                 <ExperienceComponent experiences={experiences} />
             </section>
+            <section id="projects" className="snap-center">
+                <Projects projects={projects} />
+            </section>
             <section id="skills" className="snap-center">
                 <Skills skills={skills} />
-            </section>
-            <section id="projects" className="snap-center">
-                <Projects projects={projects}/>
             </section>
             <section id="contact" className="snap-center">
                 <Contact />

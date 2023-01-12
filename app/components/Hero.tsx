@@ -10,7 +10,7 @@ type Props = {
     pageInfo: PageInfo
 }
 
-const categories = ['About', 'Experience', 'Skills', 'Projects']
+const categories = ['About', 'Experience', 'Projects', 'Skills']
 
 export default function Hero({ pageInfo }: Props) {
     const [text, count] = useTypewriter({

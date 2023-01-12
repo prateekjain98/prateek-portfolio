@@ -20,7 +20,7 @@ export default function About({ pageInfo }: Props) {
             // initial={{ opacity: 0 }}
             // whileInView={{ opacity: 1 }}
             // transition={{ duration: 1.5 }}
-            className="sectionContainer relative text-center md:text-left md:flex-row max-w-6xl px-10 justify-evenly mx-auto"
+            className="sectionContainer pt-10 relative text-center md:text-left md:flex-row max-w-6xl px-10 justify-evenly mx-auto"
         >
             <motion.h3
                 initial={{ opacity: 0 }}
@@ -35,14 +35,16 @@ export default function About({ pageInfo }: Props) {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
                 src={urlFor(pageInfo?.aboutImage).url()}
-                className="-mb-20 md:mb-0 m-10 flex-shrink-0 h-40 object-cover md:h-80 xl:h-[300px]"
+                className="-mb-20 md:mb-0 m-10 flex-shrink-0 h-40 object-cover md:h-72 xl:h-[300px]"
             />
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
             >
-                <p className="text-base md:p-2">{pageInfo?.backgroundInfo}</p>
+                <p className="md:text-base text-sm md:p-2">
+                    {pageInfo?.backgroundInfo}
+                </p>
             </motion.div>
         </motion.div>
     )

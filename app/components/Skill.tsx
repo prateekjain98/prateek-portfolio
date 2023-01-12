@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import about from './about.png'
-import { Skill as SkillType} from '../typings'
+import { Skill as SkillType } from '../typings'
 import { urlFor } from '../sanity'
 
 type Props = {
@@ -14,8 +14,9 @@ export default function Skill({ directionLeft, skill }: Props) {
         <div className="group relative flex cursor-pointer items-center justify-center">
             <div className="flex flex-col items-center">
                 <motion.img
+                    key={skill._id}
                     initial={{
-                        x: directionLeft ? -100 : 100,
+                        x: directionLeft ? '-5vw' : '5vw',
                         opacity: 0,
                     }}
                     transition={{ duration: 1 }}

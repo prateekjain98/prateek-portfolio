@@ -21,7 +21,7 @@ export default function Projects({ projects }: Props) {
             >
                 Projects
             </motion.h3>
-            <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 customScrollbar">
+            <div className="relative mt-10 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 customScrollbar">
                 {projects.map((project) => (
                     <div
                         key={project._id}
@@ -32,7 +32,7 @@ export default function Projects({ projects }: Props) {
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 1.5 }}
                             src={urlFor(project.image).url()}
-                            className="w-[350px]"
+                            className="md:w-[350px] w-[250px]"
                         />
                         <div className=" px-0 md:px-10 max-w-7xl">
                             <div className='flex justify-center items-center'>
