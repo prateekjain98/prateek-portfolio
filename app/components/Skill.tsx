@@ -22,12 +22,12 @@ export default function Skill({ directionLeft, skill }: Props) {
                     transition={{ duration: 1 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     src={urlFor(skill.image).url()}
-                    className=" rounded-xl p-1 border border-gray-500 object-contain h-10 w-10 filter group-hover:grayscale transition duration-400 ease-in-out"
+                    className=" rounded-xl p-1 border border-gray-500 object-contain h-8 w-8 md:h-10 md:w-10 filter group-hover:grayscale transition duration-400 ease-in-out"
                 />
-                <p className="text-gray-500 text-sm">{skill.title}</p>
-                <div className="absolute opacity-0 group-hover:opacity-80 transition duration-400 ease-in-out group-hover:bg-white h-10 w-10 rounded-xl z-0">
+                <p className="text-gray-500 text-xs">{skill.title}</p>
+                <div className="absolute opacity-0 group-hover:opacity-80 transition duration-400 ease-in-out group-hover:bg-white h-8 w-8 md:h-10 md:w-10 rounded-xl z-0">
                     <div className="flex items-center justify-center h-full">
-                        <p className="font-bold text-black opacity-100">
+                        <p className="text-xs md:text-sm font-bold text-black opacity-100">
                             {skill.progress}%
                         </p>
                     </div>

@@ -18,7 +18,7 @@ export default function ExperienceComponent({experiences}: Props) {
             >
                 Experience
             </motion.h3>
-            <div className="w-full h-[85vh] flex items-center space-x-5 overflow-x-scroll px-10 snap-x snap-mandatory customScrollbar">
+            <div className="w-full pt-10 h-[85vh] flex items-center space-x-5 overflow-x-scroll px-10 snap-x snap-mandatory customScrollbar">
                 {experiences
                     .sort(
                         (a, b) =>
