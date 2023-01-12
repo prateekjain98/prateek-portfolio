@@ -25,7 +25,7 @@ export default function Projects({ projects }: Props) {
                 {projects.map((project) => (
                     <div
                         key={project._id}
-                        className="w-full pt-10 flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center md:p-44 h-screen"
+                        className="w-full mt-10 flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center md:p-44 h-screen"
                     >
                         <motion.img
                             initial={{ opacity: 0 }}
