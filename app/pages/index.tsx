@@ -9,6 +9,7 @@ import Contact from '../components/Contact'
 import { GetStaticProps } from 'next'
 import { Experience, PageInfo, Project, Skill, Social } from '../typings'
 import { fetchApi } from '../fetchData'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 type Props = {
     pageInfo: PageInfo

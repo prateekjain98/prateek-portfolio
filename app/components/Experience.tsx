@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import ExperienceCard from './ExperienceCard'
 import { Experience } from '../typings'
+import {Carousel} from 'react-bootstrap'
 
 type Props = {
     experiences: Experience[]
@@ -9,7 +10,7 @@ type Props = {
 
 export default function ExperienceComponent({experiences}: Props) {
     return (
-        <div className="sectionContainer relative md:flex-row max-w-full justify-end mx-auto md:items-end md:justify-center">
+        <div className="sectionContainer relative md:flex-row max-w-full mx-auto md:justify-center">
             <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -18,19 +19,22 @@ export default function ExperienceComponent({experiences}: Props) {
             >
                 Experience
             </motion.h3>
-            <div className="w-full h-[90vh] flex items-center space-x-5 overflow-x-scroll px-10 snap-x snap-mandatory customScrollbar">
+            <Carousel className="w-screen h-screen py-10">
                 {experiences
                     .sort(
                         (a, b) =>
-                            new Date(b.dateStarted).getTime() - new Date(a.dateStarted).getTime(),
+                            new Date(b.dateStarted).getTime() -
+                            new Date(a.dateStarted).getTime(),
                     )
                     .map((experience) => (
-                        <ExperienceCard
-                            key={experience._id}
-                            experience={experience}
-                        />
+                        <Carousel.Item className="md:p-20 p-4 mt-24 md:mt-16">
+                            <ExperienceCard
+                                key={experience._id}
+                                experience={experience}
+                            />
+                        </Carousel.Item>
                     ))}
-            </div>
+            </Carousel>
         </div>
     )
 }

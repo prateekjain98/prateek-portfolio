@@ -10,7 +10,7 @@ type Props = {
 
 export default function Header({ socials }: Props) {
     return (
-        <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto xl:items-center z-30">
+        <header className="sticky top-0 md:p-5 flex items-start justify-between max-w-7xl mx-auto xl:items-center z-30">
             <motion.div
                 initial={{
                     x: -500,
@@ -60,7 +60,7 @@ export default function Header({ socials }: Props) {
                     fgColor="gray"
                     bgColor="transparent"
                 />
-                <p className="uppercase hidden md:inline-flex text-gray-400">
+                <p className="uppercase hidden m-0 md:inline-flex text-gray-400">
                     contact me
                 </p>
             </motion.div>

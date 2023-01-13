@@ -4,6 +4,7 @@ import about from './about.png'
 import { Project } from '../typings'
 import { urlFor } from '../sanity'
 import { SocialIcon } from 'react-social-icons'
+import { Carousel } from 'react-bootstrap'
 
 type Props = {
     projects: Project[]
@@ -21,18 +22,18 @@ export default function Projects({ projects }: Props) {
             >
                 Projects
             </motion.h3>
-            <div className="mt-10 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 customScrollbar">
+            <Carousel className="mt-32 py-10 z-20 w-screen" interval={null} >
                 {projects.map((project) => (
-                    <div
+                    <Carousel.Item
                         key={project._id}
-                        className="w-full md:mt-10 flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center md:p-44 h-screen"
+                        className="md:p-20 p-4"
                     >
                         <motion.img
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 1.5 }}
                             src={urlFor(project.image).url()}
-                            className="md:w-[350px] w-[250px]"
+                            className="md:w-[300px] w-[200px] flex mx-auto"
                         />
                         <div className="px-10 max-w-7xl">
                             <div className="flex justify-center items-center">
@@ -45,7 +46,7 @@ export default function Projects({ projects }: Props) {
                                     bgColor="transparent"
                                 />
                             </div>
-                            <p className="text-center md:text-left">
+                            <p className="text-xs md:text-base">
                                 {project.summary}
                             </p>
                             <div className="flex flex-wrap justify-center space-x-2 my-2">
@@ -65,9 +66,9 @@ export default function Projects({ projects }: Props) {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </Carousel.Item>
                 ))}
-            </div>
+            </Carousel>
             <div className="w-full absolute top-[30%] bg-cyan-500/20 left-0 h-[300px] md:h-[250px] -skew-y-12" />
         </div>
     )

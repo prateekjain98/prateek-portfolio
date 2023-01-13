@@ -22,7 +22,7 @@ export default function Skills({ skills }: Props) {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
-                className="absolute top-32 tracking-[3px] text-gray-500 text-sm"
+                className="absolute top-28 tracking-[3px] text-gray-500 text-sm"
             >
                 Hover over a skill for proficiency
             </motion.h3>
@@ -30,7 +30,7 @@ export default function Skills({ skills }: Props) {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
-                className="m-5 grid grid-cols-4 w-[89vw] md:grid-cols-6 gap-5 max-h-[75vh] overflow-y-auto overflow-x-hidden customScrollbar"
+                className="mt-32 grid grid-cols-4 w-[89vw] md:grid-cols-6 md:gap-3 max-h-[75vh] overflow-y-auto overflow-x-hidden customScrollbar"
             >
                 {skills
                     .sort((a, b) => b.progress - a.progress)
