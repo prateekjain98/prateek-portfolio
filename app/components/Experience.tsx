@@ -27,11 +27,11 @@ export default function ExperienceComponent({experiences}: Props) {
                             new Date(a.dateStarted).getTime(),
                     )
                     .map((experience) => (
-                        <Carousel.Item className="md:p-20 p-4 mt-24 md:mt-16">
-                            <ExperienceCard
-                                key={experience._id}
-                                experience={experience}
-                            />
+                        <Carousel.Item
+                            key={experience._id}
+                            className="md:p-20 p-4 mt-24 md:mt-16"
+                        >
+                            <ExperienceCard experience={experience} />
                         </Carousel.Item>
                     ))}
             </Carousel>
