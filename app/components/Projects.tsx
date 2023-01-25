@@ -22,11 +22,11 @@ export default function Projects({ projects }: Props) {
             >
                 Projects
             </motion.h3>
-            <Carousel className="w-screen h-screen pt-28 z-20" interval={null}>
+            <Carousel className="w-screen z-20" interval={null}>
                 {projects.map((project) => (
                     <Carousel.Item
                         key={project._id}
-                        className="flex flex-col justify-center w-[80vw] md:w-[70vw] h-[70vh]"
+                        className="flex flex-col my-10 p-10 justify-center w-[80vw] md:w-[70vw] h-[70vh]"
                     >
                         <motion.img
                             initial={{ opacity: 0 }}
@@ -35,7 +35,7 @@ export default function Projects({ projects }: Props) {
                             src={urlFor(project.image).url()}
                             className="md:w-[300px] w-[200px] flex mx-auto"
                         />
-                        <div className="px-10 max-w-7xl">
+                        <div className="px-2 max-w-7xl">
                             <div className="flex justify-center items-center">
                                 <h4 className="text-2xl font-semibold text-center m-0">
                                     {project.title}

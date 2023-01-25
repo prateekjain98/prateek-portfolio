@@ -2,13 +2,13 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import ExperienceCard from './ExperienceCard'
 import { Experience } from '../typings'
-import {Carousel} from 'react-bootstrap'
+import { Carousel } from 'react-bootstrap'
 
 type Props = {
     experiences: Experience[]
 }
 
-export default function ExperienceComponent({experiences}: Props) {
+export default function ExperienceComponent({ experiences }: Props) {
     return (
         <div className="sectionContainer relative md:flex-row max-w-full mx-auto md:justify-center">
             <motion.h3
@@ -19,7 +19,7 @@ export default function ExperienceComponent({experiences}: Props) {
             >
                 Experience
             </motion.h3>
-            <Carousel className="w-screen h-screen pt-28" interval={null}>
+            <Carousel className='w-screen' interval={null}>
                 {experiences
                     .sort(
                         (a, b) =>
@@ -29,6 +29,7 @@ export default function ExperienceComponent({experiences}: Props) {
                     .map((experience) => (
                         <Carousel.Item
                             key={experience._id}
+                            className="pt-24 p-10"
                         >
                             <ExperienceCard experience={experience} />
                         </Carousel.Item>
