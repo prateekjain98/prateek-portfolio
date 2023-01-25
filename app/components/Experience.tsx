@@ -29,7 +29,7 @@ export default function ExperienceComponent({ experiences }: Props) {
                     .map((experience) => (
                         <Carousel.Item
                             key={experience._id}
-                            className="pt-24 p-10"
+                            className="pt-32 md:pt-24 p-10"
                         >
                             <ExperienceCard experience={experience} />
                         </Carousel.Item>

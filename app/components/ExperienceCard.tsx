@@ -10,22 +10,22 @@ type Props = {
 
 export default function ExperienceCard({ experience }: Props) {
     return (
-        <article className="flex flex-col mx-auto w-[80vw] md:w-[70vw] h-[70vh] rounded-2xl items-center justify-evenly bg-[#292929] p-4 overflow-y-auto customScrollbar">
-            <motion.img
-                initial={{
-                    y: -10,
-                    opacity: 0,
-                }}
-                transition={{ duration: 0.8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="h-16 w-16 xl:h-[70px] xl:w-[70px] object-contain object-center"
-                src={urlFor(experience?.companyLogo).url()}
-            />
-            <div className="px-0 md:px-10">
-                <h4 className="text-xl font-light">{experience.jobTitle}</h4>
+        <article className="flex flex-col mx-auto w-[80vw] md:w-[70vw] md:h-[70vh] h-[80vh] rounded-2xl items-center justify-evenly bg-[#292929] p-4 overflow-y-auto customScrollbar">
+            <div className="px-0 md:px-10 flex flex-col items-center">
+                <motion.img
+                    initial={{
+                        y: -10,
+                        opacity: 0,
+                    }}
+                    transition={{ duration: 0.8 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="h-16 w-16 xl:h-[70px] xl:w-[70px] object-contain object-center"
+                    src={urlFor(experience?.companyLogo).url()}
+                />
                 <p className="font-semibold text-lg mt-1">
                     {experience.companyName}
                 </p>
+                <h4 className="text-xl font-light">{experience.jobTitle}</h4>
                 <div className="flex flex-wrap justify-center md:space-x-2 md:my-2">
                     {experience?.technologies?.map((tech) => (
                         <div

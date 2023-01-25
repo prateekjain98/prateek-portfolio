@@ -26,44 +26,46 @@ export default function Projects({ projects }: Props) {
                 {projects.map((project) => (
                     <Carousel.Item
                         key={project._id}
-                        className="flex flex-col my-10 p-10 justify-center w-[80vw] md:w-[70vw] h-[70vh]"
+                        className="pt-32 md:pt-24 p-10"
                     >
-                        <motion.img
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 1.5 }}
-                            src={urlFor(project.image).url()}
-                            className="md:w-[300px] w-[200px] flex mx-auto"
-                        />
-                        <div className="px-2 max-w-7xl">
-                            <div className="flex justify-center items-center">
-                                <h4 className="text-2xl font-semibold text-center m-0">
-                                    {project.title}
-                                </h4>
-                                <SocialIcon
-                                    url={project.gitUrl}
-                                    fgColor="white"
-                                    bgColor="transparent"
-                                />
-                            </div>
-                            <p className="text-xs md:text-base px-10">
-                                {project.summary}
-                            </p>
-                            <div className="flex flex-wrap justify-center space-x-2 my-2">
-                                {project?.technologies?.map((tech) => (
-                                    <div
-                                        key={tech._id}
-                                        className="flex flex-col items-center p-1"
-                                    >
-                                        <img
-                                            className="md:h-6 md:w-6 h-5 w-5 object-contain"
-                                            src={urlFor(tech.image).url()}
-                                        />
-                                        <p className="text-gray-400 text-xs">
-                                            {tech.title}
-                                        </p>
-                                    </div>
-                                ))}
+                        <div className="flex flex-col items-center mx-auto justify-center w-[80vw] md:w-[70vw] h-[80vh] md:h-[70vh]">
+                            <motion.img
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 1.5 }}
+                                src={urlFor(project.image).url()}
+                                className="md:w-[300px] w-[200px] flex mx-auto"
+                            />
+                            <div className="px-2 max-w-7xl">
+                                <div className="flex justify-center items-center">
+                                    <h4 className="text-2xl font-semibold text-center m-0">
+                                        {project.title}
+                                    </h4>
+                                    <SocialIcon
+                                        url={project.gitUrl}
+                                        fgColor="white"
+                                        bgColor="transparent"
+                                    />
+                                </div>
+                                <p className="text-xs md:text-base px-10">
+                                    {project.summary}
+                                </p>
+                                <div className="flex flex-wrap justify-center space-x-2 my-2">
+                                    {project?.technologies?.map((tech) => (
+                                        <div
+                                            key={tech._id}
+                                            className="flex flex-col items-center p-1"
+                                        >
+                                            <img
+                                                className="md:h-6 md:w-6 h-5 w-5 object-contain"
+                                                src={urlFor(tech.image).url()}
+                                            />
+                                            <p className="text-gray-400 text-xs">
+                                                {tech.title}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </Carousel.Item>
