@@ -19,7 +19,7 @@ export default function ExperienceComponent({experiences}: Props) {
             >
                 Experience
             </motion.h3>
-            <Carousel className="w-screen h-screen py-10">
+            <Carousel className="w-screen h-screen pt-28" interval={null}>
                 {experiences
                     .sort(
                         (a, b) =>
@@ -29,7 +29,6 @@ export default function ExperienceComponent({experiences}: Props) {
                     .map((experience) => (
                         <Carousel.Item
                             key={experience._id}
-                            className="md:p-20 p-4 mt-24 md:mt-16"
                         >
                             <ExperienceCard experience={experience} />
                         </Carousel.Item>

@@ -27,15 +27,15 @@ export default function Contact({}: Props) {
                 <div className="space-y-10">
                     <div className="flex items-center justify-center space-x-5">
                         <PhoneIcon className="text-cyan-500 h-7 animate-pulse" />
-                        <p className="text-lg md:text-xl">+91-8290939833</p>
+                        <p className="text-lg md:text-xl m-2">+91-8290939833</p>
                     </div>
                     <div className="flex items-center justify-center space-x-5">
                         <EnvelopeIcon className="text-cyan-500 h-7 animate-pulse" />
-                        <p className="text-lg md:text-xl">prateek9jain8@gmail.com</p>
+                        <p className="text-lg md:text-xl m-2">prateek9jain8@gmail.com</p>
                     </div>
                     <div className="flex items-center justify-center space-x-5">
                         <MapPinIcon className="text-cyan-500 h-7 animate-pulse" />
-                        <p className="text-lg md:text-xl">Indore, India</p>
+                        <p className="text-lg md:text-xl m-2">Indore, India</p>
                     </div>
                 </div>
             </motion.div>

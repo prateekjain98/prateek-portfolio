@@ -22,11 +22,11 @@ export default function Projects({ projects }: Props) {
             >
                 Projects
             </motion.h3>
-            <Carousel className="mt-32 py-10 z-20 w-screen" interval={null} >
+            <Carousel className="w-screen h-screen pt-28 z-20" interval={null}>
                 {projects.map((project) => (
                     <Carousel.Item
                         key={project._id}
-                        className="md:p-20 p-4"
+                        className="flex flex-col justify-center w-[80vw] md:w-[70vw] h-[70vh]"
                     >
                         <motion.img
                             initial={{ opacity: 0 }}
@@ -37,7 +37,7 @@ export default function Projects({ projects }: Props) {
                         />
                         <div className="px-10 max-w-7xl">
                             <div className="flex justify-center items-center">
-                                <h4 className="text-2xl font-semibold text-center">
+                                <h4 className="text-2xl font-semibold text-center m-0">
                                     {project.title}
                                 </h4>
                                 <SocialIcon
@@ -46,7 +46,7 @@ export default function Projects({ projects }: Props) {
                                     bgColor="transparent"
                                 />
                             </div>
-                            <p className="text-xs md:text-base">
+                            <p className="text-xs md:text-base px-10">
                                 {project.summary}
                             </p>
                             <div className="flex flex-wrap justify-center space-x-2 my-2">
