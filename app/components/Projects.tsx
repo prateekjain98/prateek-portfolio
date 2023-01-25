@@ -28,7 +28,7 @@ export default function Projects({ projects }: Props) {
                         key={project._id}
                         className="pt-32 md:pt-24 p-10"
                     >
-                        <div className="flex flex-col items-center mx-auto justify-center w-[80vw] md:w-[70vw] h-[80vh] md:h-[70vh]">
+                        <div className="flex flex-col items-center mx-auto justify-center w-[80vw] md:w-[70vw] h-[70vh]">
                             <motion.img
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
