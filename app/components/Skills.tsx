@@ -30,7 +30,7 @@ export default function Skills({ skills }: Props) {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
-                className="mt-24 grid grid-cols-4 w-[89vw] md:grid-cols-6 md:gap-3 max-h-[75vh] overflow-y-auto overflow-x-hidden customScrollbar"
+                className="mt-20 grid grid-cols-4 w-[89vw] md:grid-cols-6 md:gap-3 max-h-[75vh] overflow-y-auto overflow-x-hidden customScrollbar"
             >
                 {skills
                     .sort((a, b) => b.progress - a.progress)

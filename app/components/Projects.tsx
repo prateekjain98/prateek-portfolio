@@ -22,12 +22,9 @@ export default function Projects({ projects }: Props) {
             >
                 Projects
             </motion.h3>
-            <Carousel className="w-screen z-20" interval={null}>
+            <Carousel className="w-screen pt-20 z-20" interval={null}>
                 {projects.map((project) => (
-                    <Carousel.Item
-                        key={project._id}
-                        className="pt-32 md:pt-24 p-10"
-                    >
+                    <Carousel.Item key={project._id} className="p-4">
                         <div className="flex flex-col items-center mx-auto justify-center w-[80vw] md:w-[70vw] h-[68vh] p-2">
                             <motion.img
                                 initial={{ opacity: 0 }}
