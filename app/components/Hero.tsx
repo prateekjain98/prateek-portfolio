@@ -16,7 +16,7 @@ export default function Hero({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words: [
             'Hi, Prateek here',
-            'I Ideate => Code => Repeat.',
+            'Ideate => Code => Repeat',
             '< Design Critic />',
         ],
         loop: true,
@@ -26,7 +26,7 @@ export default function Hero({ pageInfo }: Props) {
         <div className="sectionContainer space-y-8 justify-center text-center">
             <BackgroundCircles />
             <img
-                className="relative rounded-full h-40 mx-auto object-cover"
+                className="relative rounded-full h-40 w-40 mx-auto object-cover"
                 src={urlFor(pageInfo.mainImage).url()}
                 alt="Profile Picture"
             />
