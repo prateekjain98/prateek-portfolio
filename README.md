@@ -1,7 +1,7 @@
 # prateek-portfolio
 Portfolio website built on NEXT.JS using TypeScript (React, Framer Motion, Tailwind CSS, Sanity.io)
 
-#Deployed website - http://prateek-jain.vercel.app/
+# Deployed website - http://prateek-jain.vercel.app/
 
 The backend is hosted on Sanity.io 
 
